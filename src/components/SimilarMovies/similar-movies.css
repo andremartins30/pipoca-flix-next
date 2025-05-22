@@ -1,0 +1,71 @@
+.similar-movies {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-theme='dark'] .similar-movies {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.similar-movies h3 {
+    font-size: 1.5rem;
+    color: var(--title-color);
+    margin-bottom: 1.2rem;
+}
+
+/* Ajustando o layout das sugestões para exibir as imagens uma ao lado da outra */
+.similar-movies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+/* Aumentando o tamanho dos cards */
+.similar-movie-card {
+    flex: 0 0 175px;
+    /* Define largura fixa maior para os cards */
+    max-width: 175px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.similar-movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.similar-movie-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.similar-movie-card h4 {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.similar-movies-loading {
+    padding: 1rem 0;
+    color: var(--text-color);
+    opacity: 0.7;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .similar-movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 1rem;
+    }
+
+    .similar-movie-card h4 {
+        font-size: 0.8rem;
+    }
+}

@@ -1,0 +1,161 @@
+.cinemas-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cinemas-container h1 {
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.cinemas-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.cinema-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+}
+
+.cinema-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.cinema-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.cinema-card p {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.btn-directions {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.btn-directions:hover {
+    background-color: var(--secondary-color);
+}
+
+.loading,
+.error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem;
+}
+
+.error {
+    color: #dc3545;
+    background-color: rgba(220, 53, 69, 0.1);
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 600px;
+    box-shadow: var(--shadow);
+}
+
+.development-banner {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: var(--white);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    margin: 2rem auto;
+    max-width: 800px;
+    color: var(--text-color);
+}
+
+.development-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+}
+
+.development-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.development-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.location-info {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    text-align: left;
+    display: inline-block;
+}
+
+.location-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.location-info p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    .cinemas-container {
+        padding: 1rem;
+    }
+
+    .development-banner {
+        padding: 2rem 1rem;
+    }
+
+    .development-icon {
+        font-size: 3rem;
+    }
+
+    .development-banner h2 {
+        font-size: 1.5rem;
+    }
+
+    .development-banner p {
+        font-size: 1rem;
+    }
+}

@@ -1,5 +1,22 @@
-import "@/styles/globals.css";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/react";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import '../styles/global.css';
+import '../components/AdsterraBanner/adsterra-banner.css';
+import '../components/AdsterraContainer/adsterra-container.css';
+import '../components/AdsterraSideBanner/adsterra-side-banner.css';
+import '../components/AdsterraTopBanner/adsterra-top-banner.css';
 
-export default function App({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <Component {...pageProps} />
+      <ToastContainer autoClose={2500} />
+      <Analytics />
+      <SpeedInsights />
+    </>
+  );
 }
+
+export default MyApp;
