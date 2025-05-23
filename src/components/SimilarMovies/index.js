@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import api from '../../services/api';
-import './similar-movies.css';
+//import './similar-movies.css';
 
 const SimilarMovies = ({ movieId }) => {
     const [similarMovies, setSimilarMovies] = useState([]);
@@ -42,7 +42,7 @@ const SimilarMovies = ({ movieId }) => {
             <h3>Filmes que você pode gostar!</h3>
             <div className="similar-movies-grid">
                 {similarMovies.map(movie => (
-                    <Link to={`/filme/${movie.id}`} key={movie.id} className="similar-movie-card">
+                    <Link href={`/filme/${movie.id}`} key={movie.id} className="similar-movie-card">
                         <img
                             src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
                             alt={movie.title}

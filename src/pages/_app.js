@@ -15,7 +15,7 @@ import '../components/Skeleton/skeleton.css';
 import '../components/AdSense/adsense.css';
 import '../pages/Home/home.css';
 import '../pages/Filme/filme.css';
-import '../pages/filme/filme.css';
+import '../components/SimilarMovies/similar-movies.css';
 
 function MyApp({ Component, pageProps }) {
   return (

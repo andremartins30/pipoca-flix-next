@@ -104,11 +104,13 @@
 }
 
 .sugestoes {
-    margin: 40px 0;
+    margin: 2.5rem 0;
+    width: 100%;
 }
 
 .sugestoes-grid {
-    margin-top: 20px;
+    margin-top: 1rem;
+    width: 100%;
 }
 
 @media (max-width: 768px) {
@@ -126,5 +128,9 @@
 
     .ator-card img {
         height: 150px;
+    }
+
+    .sugestoes {
+        margin: 2rem 0;
     }
 }

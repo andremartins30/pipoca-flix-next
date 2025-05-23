@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import api from '../../services/api'
 import { toast } from 'react-toastify'
-// import SimilarMovies from '../../components/SimilarMovies'
+import SimilarMovies from '../../components/SimilarMovies'
 import AdsterraPopUnder from '../../components/AdsterraPopUnder'
 import AdsterraBanner from '../../components/AdsterraBanner'
 import { useRouter } from 'next/router'
@@ -160,11 +160,9 @@ const Filme = () => {
                     </div>
                 </div>
 
-                {/* <div className='sugestoes'>
-                    <div className='sugestoes-grid'>
-                        <SimilarMovies movieId={filme.id} />
-                    </div>
-                </div> */}
+                <div className='sugestoes'>
+                    <SimilarMovies movieId={filme.id} />
+                </div>
 
                 <AdsterraBanner />
             </div>

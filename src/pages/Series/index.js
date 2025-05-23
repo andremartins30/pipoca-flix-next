@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import api from '../../services/api';
 import Skeleton from '../../components/Skeleton';
 import '../../styles/global.css';
-import './series.css';
+//import './series.css';
 import AdsterraBanner from '../../components/AdsterraBanner';
 import AdsterraContainer from '../../components/AdsterraContainer';
 import AdsterraTopBanner from '../../components/AdsterraTopBanner';
