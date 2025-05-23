@@ -1,10 +1,10 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import api from '../../services/api'
-import { Link } from 'react-router-dom'
 import Skeleton from '../../components/Skeleton'
 // import AdSense from '../../components/AdSense'
-import './home.css'
+//import './home.css'
 import AdsterraBanner from '../../components/AdsterraBanner'
 import AdsterraContainer from '../../components/AdsterraContainer'
 //import AdsterraPopUnder from '../../components/AdsterraPopUnder'
@@ -190,10 +190,10 @@ const Home = () => {
 
             <div className="lista-filmes">
                 {filmes.map((filme, index) => (
-                    <React.Fragment key={filme.id}>
+                    <React.Fragment key={filme.id || index}>
                         <article className="filme-card">
                             <div className="filme-poster">
-                                <span className="vote-average">{filme.vote_average.toFixed(2)}</span>
+                                <span className="vote-average">{filme.vote_average?.toFixed(2)}</span>
                                 <img
                                     src={`https://image.tmdb.org/t/p/w500${filme.poster_path}`}
                                     alt={filme.title}
@@ -203,9 +203,11 @@ const Home = () => {
                             <strong className="filme-title">
                                 {filme.title}
                             </strong>
-                            <Link to={`/filme/${filme.id}`} className="btn-acessar">
-                                <span>Ver Detalhes</span>
-                            </Link>
+                            {filme.id && (
+                                <Link href={`/filme/${filme.id}`} className="btn-acessar">
+                                    <span>Ver Detalhes</span>
+                                </Link>
+                            )}
                         </article>
 
                         {(index + 1) % 16 === 0 && (

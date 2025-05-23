@@ -1,8 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
-import './header.css'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import icon from './icon.png'
+// import icon from './icon.png'
 import ThemeToggle from '../ThemeToggle'
 import SearchBar from '../SearchBar'
 
@@ -33,7 +32,7 @@ const Header = () => {
         <header>
             <div className="header-left">
                 <Link href='/' className='logo'>
-                    <img src={icon} alt='icon' />
+                    <img src={'/icon.png'} alt='icon' />
                     <span className="site-title">PipocaFLIX</span>
                 </Link>
 

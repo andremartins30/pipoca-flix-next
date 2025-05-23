@@ -1,175 +1,130 @@
 .filme-info {
+    max-width: 1200px;
     margin: 0 auto;
-    margin-top: 18px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 100%;
-    padding: 0 16px;
-    align-items: flex-start;
-    text-align: left;
+    padding: 20px;
 }
 
 .filme-info h1 {
-    margin: 14px 0;
-    width: 100%;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
 .filme-info img {
-    border-radius: 8px;
     width: 100%;
-    max-width: 100%;
     max-height: 500px;
     object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
 .filme-info h3 {
-    margin-top: 14px;
-    width: 100%;
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
 }
 
 .filme-info span {
-    margin: 8px 0;
-    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.avaliacao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.rating-badge {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .area-buttons {
-    width: 100%;
     display: flex;
-    gap: 12px;
-    margin-top: 14px;
+    gap: 10px;
+    margin: 20px 0;
 }
 
 .area-buttons button {
-    margin: 0;
-    font-size: 20px;
-    border: 0;
-    outline: none;
-    padding: 12px 24px;
+    padding: 10px 20px;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: all 0.5s;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
 }
 
 .area-buttons button:hover {
-    background-color: #002069;
-    color: #ffca03;
+    background-color: #0056b3;
 }
 
-.area-buttons a {
+.area-buttons button a {
+    color: white;
     text-decoration: none;
-    color: black;
-    transition: all 0.5s;
-}
-
-.area-buttons a:hover {
-    color: #ffca03;
 }
 
 .elenco {
-    margin-top: 2rem;
-    width: 100%;
-}
-
-.elenco h3 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    color: var(--title-color);
+    margin: 40px 0;
 }
 
 .elenco-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 1rem;
-    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .ator-card {
-    flex: 0 0 120px;
-    max-width: 200px;
     text-align: center;
-    background-color: var(--background-color);
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 0.3rem;
-    font-size: 0.8rem;
 }
 
 .ator-card img {
     width: 100%;
-    height: auto;
-    border-radius: 10%;
-    margin-bottom: 0.3rem;
-    filter: grayscale(100%);
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
 .ator-card strong {
     display: block;
-    font-size: 0.75rem;
-    color: var(--title-color);
-    margin-bottom: 0.2rem;
-    white-space: normal;
-    overflow: visible;
-    text-overflow: unset;
+    margin-bottom: 5px;
 }
 
 .ator-card span {
-    font-size: 0.7rem;
-    color: var(--text-color);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    color: #666;
+    font-size: 0.9rem;
 }
 
-@media (min-width: 768px) {
-    .elenco-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .elenco-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.5rem;
-    }
-
-    .filme-info {
-        padding: 0 12px;
-    }
-
-    .area-buttons {
-        flex-direction: column;
-    }
-
-    .area-buttons button {
-        width: 100%;
-    }
+.sugestoes {
+    margin: 40px 0;
 }
 
 .sugestoes-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 1rem;
-    width: 100%;
+    margin-top: 20px;
 }
 
-.sugestoes-grid img {
-    width: 100px;
-    height: auto;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+@media (max-width: 768px) {
+    .filme-info {
+        padding: 10px;
+    }
 
-.adsterra-container {
-    width: 100%;
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .filme-info h1 {
+        font-size: 2rem;
+    }
+
+    .elenco-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .ator-card img {
+        height: 150px;
+    }
 }
